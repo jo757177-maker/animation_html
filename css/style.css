@@ -1,0 +1,76 @@
+@charset "UtF-8";
+
+@import url(reset.css);
+@import url(font.css);
+
+body{overflow: hidden;}
+
+header{height: 80px;position: absolute;width: 100%;transition: 0.3s;z-index: 5;}
+header .container{width: 1400px;margin: 0 auto;display: flex;justify-content: space-between;align-items: center;height: 100%;}
+header h1{width: 150px;display: flex;align-items: center;}
+header nav{}
+header nav .gnb{display: flex;}
+header nav .gnb li{font-size: 20px;}
+header nav .gnb li a{padding: 20px 40px;display: block;}
+header audio{width: 100px;height: 50px;transition: 0.3s;}
+
+header:hover {height: 130px;background: rgba(255,255,255,0.7);backdrop-filter: blur(10px);}
+header:hover audio{width: 300px;}
+
+ .textbox{right: 250px;top: 130px;display: flex;justify-content: start;flex-direction: row-reverse;animation:textAni 3s;position: absolute;z-index: 3;}
+
+ @keyframes textAni{ 
+    0%{right: 500px;}
+    100%{right: 250px;}
+    
+ }
+ .textbox li{font-size: 70px;width: 80px;color: #fff;}
+ .textbox li span {display: block;height: 90px;animation:wordAni 3s forwards;position: relative;right: 100px;top: 100px;transform: rotate(30deg);opacity: 0;}
+ .textbox li span .mb40{margin-bottom: 40px;}
+
+ @keyframes wordAni {
+    0%{right: 100px;top: 100px;transform:rotate(30deg);opacity: 0;filter:blur(10px);}
+    100%{right: 0px;top: 0px;transform:rotate(0deg);opacity: 1;}
+ }
+ .textbox li:nth-child(1) span:nth-child(1){animation-delay: 0;}
+ .textbox li:nth-child(1) span:nth-child(2){animation-delay: 0.1s;}
+ .textbox li:nth-child(1) span:nth-child(3){animation-delay: 0.2s;}
+ .textbox li:nth-child(1) span:nth-child(4){animation-delay: 0.3s;}
+ .textbox li:nth-child(1) span:nth-child(5){animation-delay: 0.4s;}
+ .textbox li:nth-child(1) span:nth-child(6){animation-delay: 0.5s;}
+
+ .textbox li:nth-child(2) span:nth-child(1){animation-delay: 0s;}
+ .textbox li:nth-child(2) span:nth-child(2){animation-delay: 0.1s;}
+ .textbox li:nth-child(2) span:nth-child(3){animation-delay: 0.2s;}
+ .textbox li:nth-child(2) span:nth-child(4){animation-delay: 0.3s;}
+ .textbox li:nth-child(2) span:nth-child(5){animation-delay: 0.4s;}
+ .textbox li:nth-child(2) span:nth-child(6){animation-delay: 0.5s;}
+
+ .textbox li:nth-child(3) span:nth-child(1){animation-delay: 0s;}
+ .textbox li:nth-child(3) span:nth-child(2){animation-delay: 0.1s;}
+ .textbox li:nth-child(3) span:nth-child(3){animation-delay: 0.2s;}
+ .textbox li:nth-child(3) span:nth-child(4){animation-delay: 0.3s;}
+ .textbox li:nth-child(3) span:nth-child(5){animation-delay: 0.4s;}
+ .textbox li:nth-child(3) span:nth-child(6){animation-delay: 0.5s;}
+
+ .bgmain{background:url(../images/soonope.png);background-size: cover;height: 100vh;animation: bgmain 20s;}
+ @keyframes bgmain {
+    0%{transform: scale(1);}
+    100%{transform: scale(1.2);}
+ }
+
+ .snow{width: 100%;height: 100vh;background:url(../images/snow.png);background-size:60%; position: absolute;z-index: 1;animation:snow1 0.3s infinite linear;left: 0;top: 0;}
+@keyframes snow1{
+    0% {background-position: 0 0;}
+    100%{background-position: 500px 500px;}
+}
+.snow2{inimation:snow1 0.2s infinite linear;}
+@keyframes snow1{
+    0%{background-position: 0 0;}
+    100%{background-position: 200px 300px;}
+}
+.snow3{inimation:snow1 0.2s infinite linear;}
+@keyframes snow1{
+    0%{background-position: 0 0;}
+    100%{background-position: 500px 300px;}
+}
